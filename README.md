@@ -1,2 +1,2 @@
 # visual-3d
-A visualization small program based on threejs.
+A 3D visualization of WeChat small program.
