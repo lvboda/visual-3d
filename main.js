@@ -4,8 +4,7 @@ import './index.scss';
 
 // #ifndef VUE3
 import Vue from 'vue'
-Vue.prototype.baseUrl = 'https://7669-visualization-3d-8fdknpgfa834ec0-1309494979.tcb.qcloud.la';
-Vue.prototype.photosPath = '/test-photos';
+Vue.prototype.staticURL = 'https://lvboda.cn/static/visual-3d';
 Vue.config.productionTip = false
 App.mpType = 'app'
 const app = new Vue({

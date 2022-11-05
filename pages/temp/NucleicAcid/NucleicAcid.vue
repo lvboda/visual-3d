@@ -1,6 +1,6 @@
 <template>
 	<view class="nucleic-acid">
-	  <img :src="`${baseUrl}/photos/nucleic-acid1.jpeg`" style="width:100%;height:100%" />
+	  <img :src="`${staticURL}/photos/nucleic-acid1.jpeg`" style="width:100%;height:100%" />
 	  <view class="nucleic-acid__time">
 		{{ now }}
 	  </view>
@@ -30,7 +30,7 @@
 	export default {
 		data() {
 			return {
-				baseUrl: this.baseUrl,
+				baseUrl: this.staticURL,
 				now: '',
 			}
 		},

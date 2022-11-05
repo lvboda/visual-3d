@@ -51,7 +51,7 @@
 			let heart = null;
 			let sampler = null;
 			let originHeart = null;
-			new OBJLoader().load(`${this.baseUrl}/heart.obj`,obj => {
+			new OBJLoader().load(`${this.staticURL}/heart.obj`,obj => {
 			  heart = obj.children[0];
 			  heart.geometry.rotateX(-Math.PI * 0.5);
 			  heart.geometry.scale(0.04, 0.04, 0.04);

@@ -31,7 +31,7 @@
 		},
 		data() {
 			return {
-				baseUrl: this.baseUrl + this.photosPath,
+				baseUrl: this.staticURL + "/photos",
 			}
 		},
 		methods: {
