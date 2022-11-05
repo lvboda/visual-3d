@@ -1,14 +1,15 @@
 <template>
 	<view class="y-minus-box">
-		<img src="/static/floor_bg.jpg" :style="{width: '120%', height: '120%'}"/>
+		<img :src="`${STATIC_URL}/images/floor_bg.jpeg`" :style="{width: '120%', height: '120%'}"/>
 	</view>
 </template>
 
 <script>
+	import { STATIC_URL } from '@/utils/constant.js';
 	export default {
 		data() {
 			return {
-				
+				STATIC_URL,
 			}
 		},
 		methods: {

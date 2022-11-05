@@ -4,7 +4,6 @@ import './index.scss';
 
 // #ifndef VUE3
 import Vue from 'vue'
-Vue.prototype.staticURL = 'https://lvboda.cn/static/visual-3d';
 Vue.config.productionTip = false
 App.mpType = 'app'
 const app = new Vue({

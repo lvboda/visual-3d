@@ -1,16 +1,16 @@
 <template>
 	<view class="z-plus-box">
-		<img class="bg" src="/static/plane_bg.jpeg" />
+		<img class="bg" :src="`${STATIC_URL}/images/plane_bg.jpeg`" />
 		<view class="footer" />
 		<view class="content">
 		    <Heart :isDynamicEffect="isDynamicEffect"/>
 		</view>
 		<button style="margin-top: 20rpx;" @click="onDynamicEffectClick"> {{isDynamicEffect ? '停止' : '跳动'}}</button>
-		<!-- <button style="margin-top: 20rpx;" @click="gotoNucleicAcid">核酸检测页</button> -->
 	</view>
 </template>
 
 <script>
+	import { STATIC_URL } from '@/utils/constant.js';
 	import PhotoFrame from '@/components/PhotoFrame/PhotoFrame.nvue';
 	import Heart from '@/components/Heart/Heart.nvue';
 	export default {
@@ -21,16 +21,12 @@
 		data() {
 			return {
 				isDynamicEffect: false,
+				STATIC_URL,
 			}
 		},
 		methods: {
 			onDynamicEffectClick() {
 				this.isDynamicEffect = !this.isDynamicEffect;
-			},
-			gotoNucleicAcid() {
-				uni.navigateTo({
-					url: '../../../../temp/NucleicAcid/NucleicAcid',
-				});
 			},
 		}
 	}

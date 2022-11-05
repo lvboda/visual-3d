@@ -1,6 +1,6 @@
 <template>
 	<view class="z-minus-box">
-		<img class="bg" src="/static/plane_bg.jpeg" />
+		<img class="bg" :src="`${STATIC_URL}/images/plane_bg.jpeg`" />
 		<view class="footer" />
 		<view class="content">
 			<view class="font-LED"><span>{{years}}</span><span>年</span></view>
@@ -14,6 +14,7 @@
 </template>
 
 <script>
+	import { STATIC_URL } from '@/utils/constant.js';
 	const startTime = '2019/02/04 00:52:00';
 	export default {
 		data() {
@@ -24,6 +25,7 @@
 				minutes: '',
 				seconds: '',
 				timer: null,
+				STATIC_URL,
 			};
 		},
 		created() {

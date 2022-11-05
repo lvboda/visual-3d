@@ -5,6 +5,7 @@
 </template>
 
 <script>
+	import { STATIC_URL } from '@/utils/constant.js';
 	import * as THREE from '@/libs/three/three.weapp.js';
 	import { OBJLoader } from '@/libs/three/OBJLoader.js';
 	import { OrbitControls } from '@/libs/three/OrbitControls.js';
@@ -51,7 +52,7 @@
 			let heart = null;
 			let sampler = null;
 			let originHeart = null;
-			new OBJLoader().load(`${this.staticURL}/heart.obj`,obj => {
+			new OBJLoader().load(`${STATIC_URL}/files/heart.obj`,obj => {
 			  heart = obj.children[0];
 			  heart.geometry.rotateX(-Math.PI * 0.5);
 			  heart.geometry.scale(0.04, 0.04, 0.04);

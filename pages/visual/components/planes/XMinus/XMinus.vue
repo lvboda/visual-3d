@@ -1,29 +1,30 @@
 <template>
 	<view class="x-minus-box">
-		<img class="bg" src="/static/plane_bg.jpeg" />
+		<img class="bg" :src="`${STATIC_URL}/images/plane_bg.jpeg`" />
 		<view class="footer" />
 		<photo-frame :style="{width: '29vh', height: '29vh'}">
-			<img :src="`${baseUrl}/7.jpeg`" style="width:100%;height:100%" />
+			<img :src="`${STATIC_URL}/images/7.jpeg`" style="width:100%;height:100%" />
 		</photo-frame>
 		<photo-frame :style="{width: '35vh', height: '40vh'}">
-			<img :src="`${baseUrl}/11.jpeg`" style="width:100%;height:100%" />
+			<img :src="`${STATIC_URL}/images/11.jpeg`" style="width:100%;height:100%" />
 		</photo-frame>
 		<photo-frame :style="{width: '29vh', height: '29vh'}">
-			<img :src="`${baseUrl}/9.jpeg`" style="width:100%;height:100%" />
+			<img :src="`${STATIC_URL}/images/9.jpeg`" style="width:100%;height:100%" />
 		</photo-frame>
 		<photo-frame :style="{width: '39vh', height: '39vh'}">
-			<img :src="`${baseUrl}/10.jpeg`" style="width:100%;height:100%" />
+			<img :src="`${STATIC_URL}/images/10.jpeg`" style="width:100%;height:100%" />
 		</photo-frame>
 		<photo-frame :style="{width: '24vh', height: '30vh'}">
-			<img :src="`${baseUrl}/14.jpeg`" style="width:100%;height:100%" />
+			<img :src="`${STATIC_URL}/images/14.jpeg`" style="width:100%;height:100%" />
 		</photo-frame>
 		<photo-frame :style="{width: '34vh', height: '34vh'}">
-			<img :src="`${baseUrl}/8.jpeg`" style="width:100%;height:100%" />
+			<img :src="`${STATIC_URL}/images/8.jpeg`" style="width:100%;height:100%" />
 		</photo-frame>
 	</view>
 </template>
 
 <script>
+	import { STATIC_URL } from '@/utils/constant.js';
 	import PhotoFrame from '@/components/PhotoFrame/PhotoFrame.nvue';
 	export default {
 		components: {
@@ -31,11 +32,8 @@
 		},
 		data() {
 			return {
-				baseUrl: this.staticURL + "/photos",
+				STATIC_URL,
 			}
-		},
-		methods: {
-			
 		}
 	}
 </script>

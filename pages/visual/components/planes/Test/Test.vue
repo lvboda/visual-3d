@@ -1,6 +1,6 @@
 <template>
 	<view class="z-minus-box">
-		<img class="bg" src="/static/plane_bg.jpeg" />
+		<img class="bg" :src="`${STATIC_URL}/images/plane_bg.jpeg`" />
 		<view class="footer" />
 		<view class="content">
 			<view class="font-LED">我们生来就是孤独。</view>
@@ -10,7 +10,14 @@
 </template>
 
 <script>
-
+import { STATIC_URL } from '@/utils/constant.js';
+export default {
+	data() {
+		return {
+			STATIC_URL,
+		}
+	}
+}
 </script>
 
 <style lang="scss" scoped>
